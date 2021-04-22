@@ -1,5 +1,5 @@
 {
-  "printWidth": 100,
+  "printWidth": 120,
   "endOfLine": "lf",
   "semi": false,
   "singleQuote": true,
@@ -10,5 +10,5 @@
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "useTabs": false,
-  "requirePragma": false,
+  "requirePragma": false
 }

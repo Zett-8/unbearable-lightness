@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Great Gatsby`,
+    title: `Unbearable Lightness`,
     description: `add desc`,
     author: `Toshiki Kamei`,
     url: 'https://url.sample.com',
@@ -9,15 +9,22 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-typescript-checker`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-material-ui`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        stylesProvider: {
-          injectFirst: true,
+        fonts: {
+          google: [
+            {
+              family: 'Roboto',
+              variants: ['300', '400', '500', '600', '700'],
+            },
+          ],
         },
       },
     },
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Great Gatsby`,
+        name: `Unbearable Lightness`,
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,
@@ -39,18 +46,24 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     // You can add multiple tracking ids and a pageview event will be fired for all of them.
+    //     trackingIds: ['*******'],
+    //     // This object is used for configuration specific to this plugin
+    //     pluginConfig: {
+    //       // Puts tracking script in the head instead of the body
+    //       head: true,
+    //       // Setting this parameter is also optional. DNT = do not track
+    //       respectDNT: false,
+    //       // Avoids sending pageview hits from custom paths
+    //       exclude: [],
+    //     },
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-
-    // {
-    //   resolve: "gatsby-plugin-sentry",
-    //   options: {
-    //     dsn: "<add dsn here>",
-    //     // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-    //     // environment: process.env.NODE_ENV,
-    //     // enabled: (() => ["production", "stage"].indexOf(process.env.NODE_ENV) !== -1)()
-    //   }
-    // }
   ],
 }
