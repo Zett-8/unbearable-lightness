@@ -1,0 +1,63 @@
+{
+  "name": "great-gatsby",
+  "private": true,
+  "description": "A quick starter with Gatsby, Hasura, Apollo and firebase",
+  "version": "0.1.0",
+  "author": "Toshiki Kamei",
+  "dependencies": {
+    "@apollo/client": "^3.2.4",
+    "@material-ui/core": "^4.9.9",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^11.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "firebase": "^7.14.0",
+    "gatsby": "^2.24.80",
+    "gatsby-image": "^2.3.1",
+    "gatsby-plugin-manifest": "^2.4.35",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-offline": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^3.2.1",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-source-filesystem": "^2.3.35",
+    "gatsby-transformer-sharp": "^2.5.18",
+    "graphql": "^15.3.0",
+    "isomorphic-fetch": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.5.2",
+    "babel-preset-gatsby": "^0.5.14",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2"
+  },
+  "keywords": [
+    "gatsby",
+    "firebase",
+    "heroku",
+    "apollo"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "jest",
+    "init-hasura": "open \"https://heroku.com/deploy?template=https://github.com/hasura/graphql-engine-heroku\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zett-8/great-gatsby"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
