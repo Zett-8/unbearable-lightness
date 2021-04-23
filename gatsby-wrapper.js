@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ element }) => (
+export const GatsbyWrapper = ({ element }) => (
   <>
     {element}
   </>
