@@ -8,6 +8,7 @@ module.exports = {
     twitterImage: '',
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-typescript-checker`,
