@@ -1,9 +1,4 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import { rootWrapper, pageWrapper } from './gatsby-wrapper'
 
-// You can delete this file if you're not using it
-import { GatsbyWrapper } from './gatsby-wrapper'
-export const wrapRootElement = GatsbyWrapper
+export const wrapRootElement = rootWrapper
+export const wrapPageElement = pageWrapper
