@@ -9,7 +9,7 @@ const IndexPage = () => {
       <SEO title="Home"/>
       <div style={{ textAlign: 'center' }}>
         <h1>Hello World</h1>
-        <p>“So we beat on, boats against the current, borne back ceaselessly into the past.”</p>
+        <p>“When the heart speaks, the mind finds it indecent to object.”</p>
       </div>
     </Layout>
   )

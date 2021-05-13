@@ -7,8 +7,13 @@ module.exports = {
     ogImage: '',
     twitterImage: '',
   },
+  flags: {
+    FAST_DEV: true
+  },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-typescript-checker`,
@@ -33,8 +38,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -42,7 +45,7 @@ module.exports = {
         short_name: `Gatsby`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffffff`,
         display: `fullscreen`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
