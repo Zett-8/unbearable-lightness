@@ -1,34 +1,20 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 interface Props {
   title?: string
   description?: string
   lang?: string
   meta?: [any] | []
+  socialShareImage?: string
 }
 
-function SEO({ title, description, lang='en', meta=[] }: Props) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            url
-            ogImage
-            twitterImage
-          }
-        }
-      }
-    `
-  )
+function SEO({ title, description, lang='en', meta=[], socialShareImage }: Props) {
+  const { siteMetadata } = useSiteMetadata()
 
-  const metaTitle = title ? `title | ${site.siteMetadata.title}` : site.siteMetadata.title
-  const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title ? `title | ${siteMetadata.title}` : siteMetadata.title
+  const metaDescription = description || siteMetadata.description
 
   return (
     <Helmet
@@ -55,11 +41,11 @@ function SEO({ title, description, lang='en', meta=[] }: Props) {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.url,
+          content: siteMetadata.url,
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.ogImage,
+          content: socialShareImage || siteMetadata.ogImage,
         },
 
         {
@@ -76,15 +62,15 @@ function SEO({ title, description, lang='en', meta=[] }: Props) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: siteMetadata.author,
         },
         {
           name: `twitter:url`,
-          content: site.siteMetadata.url,
+          content: siteMetadata.url,
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.twitterImage,
+          content: socialShareImage || siteMetadata.twitterImage,
         },
       ].concat(meta)}
     />
