@@ -19,7 +19,7 @@ Kick off your project with this default boilerplate. This starter ships with the
     Use the Gatsby CLI to create a new site, specifying this repo.
 
     ```shell
-    gatsby new <appname> https://github.com/Zett-8/unbearable-lightness
+    gatsby new <appname> https://github.com/Zett-8/unbearable-lightness.git
     ```
 
 1.  **Start developing.**
