@@ -51,6 +51,8 @@ a {
     margin: 0;
     padding: 0;
     font-size: 100%;
+    color: inherit;
+    text-decoration: inherit;
     vertical-align: baseline;
     background: transparent;
 }
