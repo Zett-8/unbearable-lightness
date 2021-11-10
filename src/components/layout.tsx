@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
-
   return (
     <>
       <Header />

@@ -10,7 +10,7 @@ interface Props {
   socialShareImage?: string
 }
 
-function SEO({ title, description, lang='en', meta=[], socialShareImage }: Props) {
+function SEO({ title, description, lang = 'en', meta = [], socialShareImage }: Props) {
   const { siteMetadata } = useSiteMetadata()
 
   const metaTitle = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title
