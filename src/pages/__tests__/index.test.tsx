@@ -5,7 +5,7 @@ import { render } from '@testing-library/react'
 import IndexPage from '../index'
 
 beforeEach(() => {
-  Gatsby.useStaticQuery.mockImplementation(() => ({
+  jest.spyOn(Gatsby, 'useStaticQuery').mockImplementation(() => ({
     site: {
       siteMetadata: {
         title: '',
@@ -17,8 +17,6 @@ beforeEach(() => {
 })
 
 test('Page is rendered successfully', async () => {
-  jest.spyOn(Gatsby, 'useStaticQuery')
-
   const { container } = render(<IndexPage />)
   const res = await container.querySelector('h1')
 
