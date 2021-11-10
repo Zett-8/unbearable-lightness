@@ -22,7 +22,12 @@ const Welcome = styled.div`
   width: max-content;
   margin: 0 auto;
   padding-top: 40vh;
-  
-  h1 { font-size: 3rem; margin-bottom: 20px; }
-  p { font-size: 1.5rem; }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
 `

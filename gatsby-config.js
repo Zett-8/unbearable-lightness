@@ -8,7 +8,7 @@ module.exports = {
     twitterImage: '',
   },
   flags: {
-    FAST_DEV: true
+    FAST_DEV: true,
   },
   plugins: [
     `gatsby-plugin-image`,
