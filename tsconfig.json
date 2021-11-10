@@ -1,5 +1,7 @@
 {
-  "include": ["./src/**/*", "./src/type.d.ts"],
+  "include": ["./src/**/*",
+    "./src/providers/types/type.d.ts"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
