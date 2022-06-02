@@ -17,6 +17,7 @@ function SEO({ title, description, lang = 'en', meta = [], socialShareImage }: P
   const metaDescription = description || siteMetadata.description
 
   return (
+    // @ts-ignore
     <Helmet
       htmlAttributes={{
         lang,
