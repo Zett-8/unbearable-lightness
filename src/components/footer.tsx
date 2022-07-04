@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Footer = () => (
-  <footer>
+type Props = {
+  className?: string
+}
+
+const Component = ({ className }: Props) => (
+  <footer className={className}>
     {/*© {new Date().getFullYear()}, Built with*/}
     {/*{` `}*/}
     {/*<a href="https://www.gatsbyjs.org">Gatsby</a>*/}
   </footer>
 )
 
-export default Footer
+export const Footer = styled(Component)``

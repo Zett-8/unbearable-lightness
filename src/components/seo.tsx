@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
 
-interface Props {
+type Props = {
   title?: string
   description?: string
   lang?: string
@@ -10,7 +10,7 @@ interface Props {
   socialShareImage?: string
 }
 
-function SEO({ title, description, lang = 'en', meta = [], socialShareImage }: Props) {
+export const SEO = ({ title, description, lang = 'en', meta = [], socialShareImage }: Props) => {
   const { siteMetadata } = useSiteMetadata()
 
   const metaTitle = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title
@@ -77,5 +77,3 @@ function SEO({ title, description, lang = 'en', meta = [], socialShareImage }: P
     />
   )
 }
-
-export default SEO

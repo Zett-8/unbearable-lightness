@@ -1,20 +1,20 @@
 import React from 'react'
 
-import Header from './header'
-import Footer from './footer'
+import { Header } from './header'
+import { Footer } from './footer'
+import styled from 'styled-components'
 
-interface Props {
+type Props = {
+  className?: string
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => {
-  return (
-    <>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </>
-  )
-}
+const Component = ({ className, children }: Props) => (
+  <>
+    <Header />
+    <main className={className}>{children}</main>
+    <Footer />
+  </>
+)
 
-export default Layout
+export const Layout = styled(Component)``

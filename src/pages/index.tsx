@@ -1,33 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Layout } from '../components/layout'
+import { SEO } from '../components/seo'
 
-const IndexPage = () => {
-  return (
-    <Layout>
-      <SEO title={'home'} />
-      <Welcome style={{ textAlign: 'center' }}>
-        <h1>Hello World</h1>
-        <p>“When the heart speaks, the mind finds it indecent to object.”</p>
-      </Welcome>
-    </Layout>
-  )
+import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
+
+type Props = {
+  className?: string
+  title: string
 }
 
-export default IndexPage
+const Component = ({ className, title }: Props) => (
+  <Layout>
+    <SEO title={'home'} />
+    <div className={className} style={{ textAlign: 'center' }}>
+      <h1>{title}</h1>
+      <p>“When the heart speaks, the mind finds it indecent to object.”</p>
+    </div>
+  </Layout>
+)
 
-const Welcome = styled.div`
+const StyledComponent = styled(Component)`
   width: max-content;
   margin: 0 auto;
   padding-top: 40vh;
 
-  h1 {
+  > h1 {
     font-size: 3rem;
     margin-bottom: 20px;
   }
-  p {
+  > p {
     font-size: 1.5rem;
   }
 `
+
+const IndexPage = (props: any) => {
+  const { siteMetadata } = useSiteMetadata()
+  return <StyledComponent {...props} title={siteMetadata.title} />
+}
+
+export default IndexPage

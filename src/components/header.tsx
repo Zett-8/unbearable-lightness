@@ -1,5 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Header = () => <header />
+type Props = {
+  className?: string
+}
 
-export default Header
+const Component = ({ className }: Props) => <header className={className} />
+
+export const Header = styled(Component)``
