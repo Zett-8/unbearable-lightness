@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const CssReset = createGlobalStyle`
+export const CssReset: any = createGlobalStyle`
 @charset "UTF-8";
 
 html, body, div, span, applet, object, iframe,

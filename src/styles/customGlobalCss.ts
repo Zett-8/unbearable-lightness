@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const CustomGlobalCss = createGlobalStyle`
+export const CustomGlobalCss: any = createGlobalStyle`
   html {
     height: 100%;
     font-size: 62.5%;

@@ -1,4 +1,6 @@
-module.exports = {
+import type { GatsbyConfig } from 'gatsby'
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Unbearable Lightness`,
     description: `add desc`,
@@ -55,3 +57,5 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+export default config
