@@ -42,8 +42,6 @@ Kick off your project with this default boilerplate. This starter ships with the
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
-    ├── node_modules
-    ├── functions
     ├── src
     ├── .gitignore
     ├── .prettierrc
@@ -59,6 +57,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
+    ├── tsconfig.json
     └── README.md
 
 ## 🎓 Learning Gatsby

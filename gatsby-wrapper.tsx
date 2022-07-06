@@ -1,8 +1,10 @@
 import React, { ReactElement } from 'react'
-import { GatsbyBrowser } from 'gatsby'
-import { GatsbySSR } from 'gatsby'
+import { GatsbyBrowser, GatsbySSR } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
+
 import { CssReset } from './src/styles/cssReset'
 import { CustomGlobalCss } from './src/styles/customGlobalCss'
+import { theme } from './src/styles/theme'
 
 type Props = {
   element: ReactElement
@@ -20,6 +22,7 @@ export const pageWrapper: PageWrapper = ({ element }: Props) => (
     {/* Global CSS must belong here not in rootWrapper otherwise CSS loading delay occurs */}
     <CssReset />
     <CustomGlobalCss />
-    {element}
+    {/*@ts-ignore*/}
+    <ThemeProvider theme={theme}>{element}</ThemeProvider>
   </>
 )
