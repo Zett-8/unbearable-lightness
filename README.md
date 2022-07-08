@@ -1,3 +1,5 @@
+[![Build test](https://github.com/zett-8/unbearable-lightness/actions/workflows/build-test.yml/badge.svg)](https://github.com/zett-8/unbearable-lightness/actions/workflows/build-test.yml)
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
   Gatsby's custom starter
