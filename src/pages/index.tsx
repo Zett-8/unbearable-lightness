@@ -1,3 +1,4 @@
+/** 1. Imports **/
 import React from 'react'
 import styled from 'styled-components'
 
@@ -6,11 +7,13 @@ import { MetaTag } from '../components/metaTag'
 
 import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
 
+/** 2. Types **/
 type Props = {
   className?: string
   title: string
 }
 
+/** 3. Base component **/
 const Component = ({ className, title }: Props) => (
   <Layout>
     <MetaTag title={'home'} />
@@ -21,6 +24,7 @@ const Component = ({ className, title }: Props) => (
   </Layout>
 )
 
+/** 4. Styled component **/
 const StyledComponent = styled(Component)`
   width: max-content;
   margin: 0 auto;
@@ -35,9 +39,9 @@ const StyledComponent = styled(Component)`
   }
 `
 
+/** 5. Container **/
 const IndexPage = (props: any) => {
   const { siteMetadata } = useSiteMetadata()
   return <StyledComponent {...props} title={siteMetadata.title} />
 }
-
 export default IndexPage
