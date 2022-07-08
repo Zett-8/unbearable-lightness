@@ -1,14 +1,17 @@
+/** 1. Imports **/
 import React from 'react'
+import styled from 'styled-components'
 
 import { Header } from './header'
 import { Footer } from './footer'
-import styled from 'styled-components'
 
+/** 2. Types **/
 type Props = {
   className?: string
   children: React.ReactNode
 }
 
+/** 3. Base component **/
 const Component = ({ className, children }: Props) => (
   <>
     <Header />
@@ -17,4 +20,5 @@ const Component = ({ className, children }: Props) => (
   </>
 )
 
+/** 4. Styled component **/
 export const Layout = styled(Component)``
