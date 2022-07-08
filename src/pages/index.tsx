@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Layout } from '../components/layout'
-import { SEO } from '../components/seo'
+import { MetaTag } from '../components/metaTag'
 
 import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
 
@@ -13,7 +13,7 @@ type Props = {
 
 const Component = ({ className, title }: Props) => (
   <Layout>
-    <SEO title={'home'} />
+    <MetaTag title={'home'} />
     <div className={className} style={{ textAlign: 'center' }}>
       <h1>{title}</h1>
       <p>“When the heart speaks, the mind finds it indecent to object.”</p>

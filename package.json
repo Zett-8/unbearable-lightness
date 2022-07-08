@@ -50,11 +50,11 @@
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0",
     "develop": "gatsby develop -H 0.0.0.0",
-    "build": "gatsby build",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "serve": "gatsby serve",
+    "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
+    "build": "gatsby build",
     "test": "jest",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "update": "yarn upgrade-interactive --latest"
   },
   "repository": {
