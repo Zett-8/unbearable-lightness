@@ -31,8 +31,10 @@ const StyledComponent = styled(Component)`
     font-size: 3rem;
     margin-bottom: 20px;
   }
+
   > p {
     font-size: 1.5rem;
+    color: ${({ theme }) => theme.color.subTextGrey};
   }
 `
 

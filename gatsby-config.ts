@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from 'gatsby'
+import { theme } from './src/styles/theme'
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -27,7 +28,10 @@ const config: GatsbyConfig = {
           google: [
             {
               family: 'Roboto',
-              variants: ['300', '400', '500', '600', '700'],
+              variants:
+                process.env.NODE_ENV === 'development'
+                  ? ['100', '300', '400', '500', '700', '900']
+                  : Object.keys(theme.font.weight),
             },
           ],
         },
@@ -46,8 +50,8 @@ const config: GatsbyConfig = {
         name: `Unbearable Lightness`,
         short_name: `Gatsby`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#ffffff`,
+        background_color: theme.color.backgroundWhite,
+        theme_color: theme.color.theme,
         display: `fullscreen`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
