@@ -1,10 +1,7 @@
 /** 1. Imports **/
 import React from 'react'
 import styled from 'styled-components'
-
-import { Layout } from '../components/layout'
 import { MetaTag } from '../components/metaTag'
-
 import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
 
 /** 2. Types **/
@@ -15,13 +12,13 @@ type Props = {
 
 /** 3. Base component **/
 const Component = ({ className, title }: Props) => (
-  <Layout>
+  <>
     <MetaTag title={'home'} />
     <div className={className} style={{ textAlign: 'center' }}>
       <h1>{title}</h1>
       <p>“When the heart speaks, the mind finds it indecent to object.”</p>
     </div>
-  </Layout>
+  </>
 )
 
 /** 4. Styled component **/
