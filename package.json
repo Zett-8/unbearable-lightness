@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Toshiki Kamei",
   "dependencies": {
-    "gatsby": "^4.18.0",
+    "gatsby": "4.17.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^2.18.0",
     "gatsby-plugin-manifest": "^4.18.0",
