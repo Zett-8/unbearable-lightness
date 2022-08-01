@@ -1,12 +1,20 @@
 import type { GatsbyConfig } from 'gatsby'
 import { theme } from './src/styles/theme'
 
+const siteConfig = {
+  title: `Unbearable Lightness`,
+  shortT: `Unbearable Lightness`,
+  description: `add desc`,
+  author: `zett-8`,
+  url: `https://url.sample.com`,
+}
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Unbearable Lightness`,
-    description: `add desc`,
-    author: `Toshiki Kamei`,
-    url: 'https://url.sample.com',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    author: siteConfig.author,
+    url: siteConfig.url,
     ogImage: '',
     twitterImage: '',
   },
@@ -14,6 +22,18 @@ const config: GatsbyConfig = {
     FAST_DEV: true,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: siteConfig.title,
+        short_name: siteConfig.shortT,
+        start_url: `/`,
+        background_color: theme.color.backgroundWhite,
+        theme_color: theme.color.theme,
+        display: `fullscreen`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -42,18 +62,6 @@ const config: GatsbyConfig = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Unbearable Lightness`,
-        short_name: `Gatsby`,
-        start_url: `/`,
-        background_color: theme.color.backgroundWhite,
-        theme_color: theme.color.theme,
-        display: `fullscreen`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
