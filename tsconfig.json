@@ -3,15 +3,15 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "lib": ["dom", "es2017"],
-    "allowJs": true,
-    "jsx": "react",
+    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
     "strict": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "allowJs": false,
+    "jsx": "react",
     "noEmit": true,
     "skipLibCheck": true,
-    "moduleResolution": "node"
+    "esModuleInterop": true
   }
 }
