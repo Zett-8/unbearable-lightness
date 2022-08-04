@@ -16,14 +16,14 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
   padding: 0;
-  border: 0;
-  outline:0;
-  font-size: 100%;
+  margin: 0;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
   background:transparent;
+  border: 0;
+  outline:0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -41,15 +41,16 @@ del { text-decoration: line-through; }
 input, select { vertical-align:middle; }
 
 blockquote, q { quotes: none; }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote::before, blockquote::after,
+q::before, q::after {
   content: '';
   content: none;
 }
 
 a {
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-size: 100%;
     color: inherit;
     text-decoration: inherit;
@@ -60,15 +61,15 @@ a {
 hr {
     display: block;
     height: 1px;
-    border: 0;  
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
     padding: 0;
+    margin: 1em 0;
+    border: 0;  
+    border-top: 1px solid #ccc;
 }
 
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
 *,

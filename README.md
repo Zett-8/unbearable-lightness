@@ -11,6 +11,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 - Typescript
 - Styled-component
+- Prettier & Stylelint
 - Testing (Jest)
 - PWA (optional)
 
