@@ -62,7 +62,7 @@
     "build": "gatsby build",
     "test": "jest",
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "style": "stylelint **/*.{tsx,jsx,js,ts}",
+    "style": "stylelint \"**/*.{tsx,jsx,js,ts}\"",
     "lint": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\" && yarn style",
     "update": "yarn upgrade-interactive --latest"
   },
