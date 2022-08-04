@@ -24,12 +24,12 @@ const Component = ({ className, title }: Props) => (
 /** 4. Styled component **/
 const StyledComponent = styled(Component)`
   width: max-content;
-  margin: 0 auto;
   padding-top: 40vh;
+  margin: 0 auto;
 
   > h1 {
-    font-size: 3rem;
     margin-bottom: 20px;
+    font-size: 3rem;
   }
 
   > p {
