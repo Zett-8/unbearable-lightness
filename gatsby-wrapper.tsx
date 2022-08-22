@@ -17,9 +17,7 @@ type RootWrapper = GatsbyBrowser['wrapRootElement'] | GatsbySSR['wrapRootElement
 type PageWrapper = GatsbyBrowser['wrapPageElement'] | GatsbySSR['wrapPageElement']
 
 // Set up any Provider components that will wrap the application.
-export const rootWrapper: RootWrapper = ({
-  element,
-}: WrapRootElementBrowserArgs | WrapRootElementNodeArgs) => (
+export const rootWrapper: RootWrapper = ({ element }: any) => (
   <>
     {/*@ts-ignore TODO*/}
     <ThemeProvider theme={theme}>{element}</ThemeProvider>
