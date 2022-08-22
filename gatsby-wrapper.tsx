@@ -2,8 +2,6 @@ import React from 'react'
 import type {
   GatsbyBrowser,
   GatsbySSR,
-  WrapPageElementBrowserArgs,
-  WrapPageElementNodeArgs,
   WrapRootElementBrowserArgs,
   WrapRootElementNodeArgs,
 } from 'gatsby'
@@ -29,7 +27,7 @@ export const rootWrapper: RootWrapper = ({
 )
 
 // Set wrapper components around pages that won’t get unmounted on page changes.
-export const pageWrapper: PageWrapper = ({ element, props }: WrapPageElementNodeArgs) => (
+export const pageWrapper: PageWrapper = ({ element, props }: any) => (
   <>
     <CssReset />
     <CustomGlobalCss />
