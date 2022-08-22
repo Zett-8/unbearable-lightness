@@ -1,9 +1,10 @@
 /** 1. Imports **/
 import React from 'react'
+import { PageProps } from 'gatsby'
 import { MetaTag } from '../components/metaTag'
 
 /** 3. Base component **/
-const NotFoundPage = () => (
+const NotFoundPage = (props: PageProps) => (
   <>
     <MetaTag title="404: Not found" />
     <h1>NOT FOUND</h1>

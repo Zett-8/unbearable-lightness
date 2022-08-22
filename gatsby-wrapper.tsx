@@ -29,10 +29,7 @@ export const rootWrapper: RootWrapper = ({
 )
 
 // Set wrapper components around pages that won’t get unmounted on page changes.
-export const pageWrapper: PageWrapper = ({
-  element,
-  props,
-}: WrapPageElementBrowserArgs | WrapPageElementNodeArgs) => (
+export const pageWrapper: PageWrapper = ({ element, props }: WrapPageElementNodeArgs) => (
   <>
     <CssReset />
     <CustomGlobalCss />

@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { MetaTag } from '../components/metaTag'
 import { useSiteMetadata } from '../providers/hooks/useSiteMetadata'
+import { PageProps } from 'gatsby'
 
 /** 2. Types **/
 type Props = {
@@ -39,8 +40,8 @@ const StyledComponent = styled(Component)`
 `
 
 /** 5. Container **/
-const IndexPage = (props: any) => {
+const IndexPage = (props: PageProps) => {
   const { siteMetadata } = useSiteMetadata()
-  return <StyledComponent {...props} title={siteMetadata.title} />
+  return <StyledComponent title={siteMetadata.title} />
 }
 export default IndexPage
