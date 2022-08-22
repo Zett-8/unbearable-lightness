@@ -16,7 +16,7 @@ export const theme = {
       '300': 300,
     },
     family: {
-      sanSerif: `'Roboto', 'Helvetica', 'Hiragino Sans', 'Meiryo', sans-serif`,
+      sanSerif: `'Rubik', 'Helvetica', 'Hiragino Sans', 'Meiryo', sans-serif`,
     },
   },
 }

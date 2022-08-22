@@ -5,7 +5,7 @@ const siteConfig = {
   title: `Unbearable Lightness`,
   shortT: `Unbearable Lightness`,
   description: `add desc`,
-  author: `zett-8`,
+  author: `zett`,
   url: `https://url.sample.com`,
 }
 
@@ -37,7 +37,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-typescript-checker`,
     `gatsby-plugin-styled-components`,
@@ -47,7 +46,7 @@ const config: GatsbyConfig = {
         fonts: {
           google: [
             {
-              family: 'Roboto',
+              family: 'Rubik',
               variants:
                 process.env.NODE_ENV === 'development'
                   ? ['100', '300', '400', '500', '700', '900']
