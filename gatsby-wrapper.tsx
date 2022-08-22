@@ -2,6 +2,8 @@ import React from 'react'
 import type {
   GatsbyBrowser,
   GatsbySSR,
+  WrapPageElementBrowserArgs,
+  WrapPageElementNodeArgs,
   WrapRootElementBrowserArgs,
   WrapRootElementNodeArgs,
 } from 'gatsby'
@@ -17,7 +19,9 @@ type RootWrapper = GatsbyBrowser['wrapRootElement'] | GatsbySSR['wrapRootElement
 type PageWrapper = GatsbyBrowser['wrapPageElement'] | GatsbySSR['wrapPageElement']
 
 // Set up any Provider components that will wrap the application.
-export const rootWrapper: RootWrapper = ({ element }: any) => (
+export const rootWrapper: RootWrapper = ({
+  element,
+}: WrapRootElementBrowserArgs | WrapRootElementNodeArgs) => (
   <>
     {/*@ts-ignore TODO*/}
     <ThemeProvider theme={theme}>{element}</ThemeProvider>
@@ -25,7 +29,10 @@ export const rootWrapper: RootWrapper = ({ element }: any) => (
 )
 
 // Set wrapper components around pages that won’t get unmounted on page changes.
-export const pageWrapper: PageWrapper = ({ element, props }: any) => (
+export const pageWrapper: PageWrapper = ({
+  element,
+  props,
+}: WrapPageElementNodeArgs | WrapPageElementBrowserArgs) => (
   <>
     <CssReset />
     <CustomGlobalCss />
