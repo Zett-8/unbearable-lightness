@@ -1,7 +1,7 @@
 {
   "include": ["./src/**/*", "./src/providers/types/type.d.ts"],
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
